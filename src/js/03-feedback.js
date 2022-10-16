@@ -13,8 +13,8 @@ const savedItems = localStorage.getItem("feedback-form-state");
 const parseItems = JSON.parse(savedItems);
 
 
-parseItems.email != undefined ? emailFieldRef.value = parseItems.email : emailFieldRef.value = '';
-parseItems.message != undefined ? textAreaRef.value = parseItems.message : textAreaRef.value = ''; 
+parseItems.email ? emailFieldRef.value = parseItems.email : emailFieldRef.value = '';
+parseItems.message ? textAreaRef.value = parseItems.message : textAreaRef.value = ''; 
 
 
 
