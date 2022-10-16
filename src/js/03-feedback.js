@@ -14,11 +14,8 @@ const parseItems = JSON.parse(savedItems);
 
 
 
-textAreaRef.value = parseItems.message;
-
-
-
-emailFieldRef.value = parseItems.email;
+parseItems.message !== undefined ? textAreaRef.value = parseItems.message : textAreaRef.value = ''; 
+parseItems.email !== undefined ? emailFieldRef.value = parseItems.email : emailFieldRef.value = '';
 
 
 
@@ -47,8 +44,7 @@ function onMessageInput(evt) {
 function onSubmit(evt) {
     evt.preventDefault();
     formData.email = evt.target.email.value;
-    formData.message = evt.target.message.value;
-    
+    formData.message = evt.target.message.value; 
     UnSubmitedData.email = ' ';
     UnSubmitedData.message = ' ';    
     localStorage.setItem("feedback-form-state", JSON.stringify(UnSubmitedData));
@@ -57,4 +53,5 @@ function onSubmit(evt) {
     console.log(formData);
     return formData;
 }
+
 
