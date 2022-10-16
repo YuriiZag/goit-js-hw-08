@@ -14,8 +14,8 @@ const parseItems = JSON.parse(savedItems);
 
 
 
-parseItems.message !== undefined ? textAreaRef.value = parseItems.message : textAreaRef.value = ''; 
-parseItems.email !== undefined ? emailFieldRef.value = parseItems.email : emailFieldRef.value = '';
+textAreaRef.value = parseItems.message;
+emailFieldRef.value = parseItems.email;
 
 
 
