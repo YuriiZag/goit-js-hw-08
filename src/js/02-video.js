@@ -20,7 +20,7 @@ import throttle from 'lodash.throttle';
           console.log(currentTime.seconds);
           
 
-          return localStorage.setItem("videoplayer-current-time", currentTime.seconds);
+          
       }
 
 console.log(localStorage.getItem('videoplayer-current-time'))

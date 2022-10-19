@@ -40,9 +40,9 @@ function onMessageInput(evt) {
 }
 
 
-
 function onSubmit(evt) {
     evt.preventDefault();
+    allInputFillSubmitRule(evt.target.email.value, evt.target.message.value)
     formData.email = evt.target.email.value;
     formData.message = evt.target.message.value; 
     UnSubmitedData.email = ' ';
@@ -54,4 +54,8 @@ function onSubmit(evt) {
     return formData;
 }
 
-
+function allInputFillSubmitRule (emailField, messageField) {
+    if (emailField === '' || messageField === '') {
+        alert('Будьласка заповніть усі поля')
+    }
+}
